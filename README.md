@@ -19,7 +19,7 @@ This would demonstrate how elements of different size will behave in same enviro
  **What do I mean by that?**
  Suppose an app shows 6 views on your screen and you scroll down and you see another view instantly, and for that to happen some extra views were created to display that smooth scroll. Hence total views created? 6 + some extra views which is still better than loading 100s of views in memory at once.
 
-### Let's get into Recycler View
+### 1. Let's get into Recycler View
 <p align="center"><img src="https://developer.android.com/training/material/images/RecyclerView.png" width="55%"></p>
 
 As we can see, **RecyclerView** contains a **Layout Manager** which determines how the data would be displayed. **Layout** can be Linear, Grid or Staggered.
@@ -27,12 +27,12 @@ The RecyclerView then calls for an **Adapter** which manages the logic of your V
 
 Now, I'll explain each aspect of code individually so that you can always create from scratch using it.
 
-**Dependency**
+### 2. Dependency
 ``` java
 com.android.support:recyclerview-v7:27.0.2
 ```
 
-**Layout**
+### 3. Layout
 ```xml
 <android.support.v7.widget.RecyclerView
   android:layout_width="match_parent"
@@ -42,7 +42,7 @@ com.android.support:recyclerview-v7:27.0.2
 ```
 List item to be displayed in RecyclerView should be created as different layout(*e.g.* list_item.xml) file
 
-**Code**
+### 4. Code
 
 Here, in main activity I used **findViewById** to get recycler view.
 We have RecyclerView, now we need an Adapter. (RecyclerView Adapter forces to create a ViewHolder so than memory can be saved because for all list items there is single viewHolder)
@@ -75,6 +75,8 @@ Then we Override certain methods, I'll explain them individually:
       return IMAGE_COUNT;
     }
     ```
+
+---
 
 ## Working
 In [MainActivity.java](https://github.com/AbhishekChd/RecyclerView/blob/master/app/src/main/java/com/example/abhishek/workingwithimages/MainActivity.java) I have defined 2 variables, **layout** and **spanCount**.
