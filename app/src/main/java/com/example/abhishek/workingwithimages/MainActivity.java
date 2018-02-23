@@ -14,18 +14,47 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Get RecyclerView
         RecyclerView recyclerView = findViewById(R.id.rv_image);
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-
-        GridLayoutManager layoutManager1 = new GridLayoutManager(this, 2);
-
-        StaggeredGridLayoutManager layoutManager2 = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-
-        recyclerView.setLayoutManager(layoutManager2);
-
+        // Set Fixed size so that list updates faster
         recyclerView.setHasFixedSize(true);
 
-        recyclerView.setAdapter(new ImageAdapter());
+        /*
+         * 0 - LinearLayout - VERTICAL
+         * 1 - LinearLayout - HORIZONTAL
+         * 2 - GridLayout
+         * 3 - StaggeredLayout
+         */
+        int layout = 1;
+
+        // How many columns for GridLayout or Staggered GridLayout
+        int spanCount = 2;
+
+
+        switch (layout) {
+            case 0:
+                LinearLayoutManager linearLayoutManagerV = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+                recyclerView.setAdapter(new ImageAdapter(3));
+                recyclerView.setLayoutManager(linearLayoutManagerV);
+                break;
+            case 1:
+                LinearLayoutManager linearLayoutManagerH = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+                recyclerView.setAdapter(new ImageAdapter(3));
+                recyclerView.setLayoutManager(linearLayoutManagerH);
+                break;
+            case 2:
+                GridLayoutManager gridLayoutManager = new GridLayoutManager(this, spanCount);
+                recyclerView.setAdapter(new ImageAdapter(2));
+                recyclerView.setLayoutManager(gridLayoutManager);
+                break;
+            case 3:
+                StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(spanCount, StaggeredGridLayoutManager.VERTICAL);
+                recyclerView.setAdapter(new ImageAdapter(3));
+                recyclerView.setLayoutManager(staggeredGridLayoutManager);
+                break;
+        }
+
+
     }
 }

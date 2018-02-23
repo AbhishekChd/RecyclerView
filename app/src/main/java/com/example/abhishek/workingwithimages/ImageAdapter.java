@@ -7,12 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHolder> {
 
     private final int TOTAL_IMAGES = 100;
+    private int IMAGE_COUNT;
+
+    public ImageAdapter(int IMAGE_COUNT) {
+        this.IMAGE_COUNT = IMAGE_COUNT;
+    }
 
     @Override
     public ImageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -33,21 +37,16 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
 
     public class ImageViewHolder extends RecyclerView.ViewHolder {
 
-        private View.OnClickListener mOnClickListener;
         private ImageView imageView;
-        private TextView mTextViewAdapterPosition;
-        private TextView mTextViewIndex;
 
         public ImageViewHolder(View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.iv_placeholder);
-//            mTextViewAdapterPosition = itemView.findViewById(R.id.tv_adapter_position);
-//            mTextViewIndex = itemView.findViewById(R.id.tv_index);
         }
 
         public void bind() {
             Log.v("ImageViewAdapter", String.format("Index: %d", getAdapterPosition()));
-            switch (getAdapterPosition() % 3) {
+            switch (getAdapterPosition() % IMAGE_COUNT) {
                 case 0:
                     imageView.setImageResource(R.drawable.placeholder_800x800);
                     break;
