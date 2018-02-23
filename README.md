@@ -1,5 +1,5 @@
 # RecyclerView
-c
+
 App demonstartes working of Recycler View and differnet layout managers and contains 3 placeholder images of different sizes.
 - 800 x 800
 - 800 x 900
