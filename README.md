@@ -41,6 +41,7 @@ In [MainActivity.java](https://github.com/AbhishekChd/RecyclerView/blob/master/a
 In [ImageAdapter.java](https://github.com/AbhishekChd/RecyclerView/blob/master/app/src/main/java/com/example/abhishek/workingwithimages/ImageAdapter.java) there are 2 important variables, **TOTAL_IMAGES** and **IMAGE_COUNT**
 
 **TOTAL_IMAGES** is to manage how many images do you want to display. **Default is 100**
+
 **IMAGE_COUNT** is for to display different images.
 * 1 for (800 x 800)
 * 2 for (800 x 800, 900 x 800) where width is to be kept same
