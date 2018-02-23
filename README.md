@@ -28,7 +28,7 @@ The RecyclerView then calls for an **Adapter** which manages the logic of your V
  
 
 ## Working
-In MainActivity.java](https://github.com/AbhishekChd/RecyclerView/blob/master/app/src/main/java/com/example/abhishek/workingwithimages/MainActivity.java) I have defined 2 variables, **layout** and **spanCount**.
+In [MainActivity.java](https://github.com/AbhishekChd/RecyclerView/blob/master/app/src/main/java/com/example/abhishek/workingwithimages/MainActivity.java) I have defined 2 variables, **layout** and **spanCount**.
 
 **layout** is defined for type of Layout you want to see.
 * 0 for LinearLayout - VERTICAL
