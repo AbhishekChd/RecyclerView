@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
          * 2 - GridLayout
          * 3 - StaggeredLayout
          */
-        int layout = 1;
+        int layout = 0;
 
         // How many columns for GridLayout or Staggered GridLayout
         int spanCount = 2;
