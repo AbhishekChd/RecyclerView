@@ -24,8 +24,57 @@ This would demonstrate how elements of different size will behave in same enviro
 
 As we can see, **RecyclerView** contains a **Layout Manager** which determines how the data would be displayed. **Layout** can be Linear, Grid or Staggered.
 The RecyclerView then calls for an **Adapter** which manages the logic of your Views and it calls for **Data** as well hence all the functionality given to Views is provided in Adapters.
- 
- 
+
+Now, I'll explain each aspect of code individually so that you can always create from scratch using it.
+
+**Dependency**
+``` java
+com.android.support:recyclerview-v7:27.0.2
+```
+
+**Layout**
+```xml
+<android.support.v7.widget.RecyclerView
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+...
+ />                                     
+```
+List item to be displayed in RecyclerView should be created as different layout(*e.g.* list_item.xml) file
+
+**Code**
+
+Here, in main activity I used **findViewById** to get recycler view.
+We have RecyclerView, now we need an Adapter. (RecyclerView Adapter forces to create a ViewHolder so than memory can be saved because for all list items there is single viewHolder)
+
+We create a new file naming it **SomeAdapter**
+Then we extend **RecyclerView.Adapter** to use it's functionality
+``` java
+// I'll explain the ViewHolder later below for now see it as single list item's View
+class SomeAdapter extends RecyclerView.Adapter<SomeAdapter.SomeAdapterViewHolder>{
+...
+}
+```
+Then we Override certain methods, I'll explain them individually:
+1. <code>onCreateViewHolder(ViewHolder parent, int viewType)</code> : This method manages what happens when View is created. RecyclerView on creates some view, just enough fr smooth scrolling (I explained that above).
+   **parent** is the Parent View where all the list items will be contained in.
+   **viewType** is used when we have more than one viewType
+   Here we use Inflater to inflate a view (list_item.xml as told above) for single list item and return it.
+   ``` java
+   return LayoutInflater.from(parent.getContext()).inflate(R.layout.image_list_item, parent, false);
+   ```
+2. <code>onBindViewolder(ViewHolder holder, int position)</code> : When we scroll same view created in the beginning are kept throughout run of our app, hence just the data is changed, which happens here. Binding means the view is on screen and needs data (Remember as I told above, an Adapter needs data). We need to instruct it how to get and display data.
+  **holder**: It is single item we want to show (list_item.xml)
+  **position**: It is the position of item in list, and hence we can show data as per position in list
+3. <code>int getItemCount()</code> : For fast access we provide the length of list directly if possible. This makes manupulation of list easy and lite for RecyclerView.
+    ``` java
+    int IMAGE_COUNT = 100;
+    ...
+    @Override
+    protected int getItemCount(){
+      return IMAGE_COUNT;
+    }
+    ```
 
 ## Working
 In [MainActivity.java](https://github.com/AbhishekChd/RecyclerView/blob/master/app/src/main/java/com/example/abhishek/workingwithimages/MainActivity.java) I have defined 2 variables, **layout** and **spanCount**.
@@ -42,7 +91,7 @@ In [ImageAdapter.java](https://github.com/AbhishekChd/RecyclerView/blob/master/a
 
 **TOTAL_IMAGES** is to manage how many images do you want to display. **Default is 100**
 
-**IMAGE_COUNT** is for to display different images.
+**IMAGE_COUNT** is to display different images.
 * 1 for (800 x 800)
 * 2 for (800 x 800, 900 x 800) where width is to be kept same
 * 3 for (800 x 800, 900 x 800, 800 x 900) both width and height varies
