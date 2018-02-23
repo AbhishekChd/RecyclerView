@@ -1,9 +1,17 @@
 # RecyclerView
 
-App demonstartes working of Recycler View and differnet layout managers
+App demonstartes working of Recycler View and differnet layout managers and added 3 placeholder images of different sizes.
+- 800 x 800
+- 800 x 900
+- 900 x 800
+This would demonstrate how elements of different size will behave in same environment.
 
+## Index <img src="https://image.flaticon.com/icons/svg/174/174836.svg" width="25px">
 1. [Main Files](#main-files)
 2. [Layouts](#layouts)
+
+
+
 
 ## Main Files
 - [MainActivity.java](https://github.com/AbhishekChd/RecyclerView/blob/master/app/src/main/java/com/example/abhishek/workingwithimages/MainActivity.java)
