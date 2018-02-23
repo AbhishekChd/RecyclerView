@@ -20,7 +20,7 @@ This would demonstrate how elements of different size will behave in same enviro
  Suppose an app shows 6 views on your screen and you scroll down and you see another view instantly, and for that to happen some extra views were created to display that smooth scroll. Hence total views created? 6 + some extra views which is still better than loading 100s of views in memory at once.
 
 ### Let's get into Recycler View
-![Recycler View](https://developer.android.com/training/material/images/RecyclerView.png)
+<p align="center"><img src="https://developer.android.com/training/material/images/RecyclerView.png" width="55%"></p>
 
 As we can see, **RecyclerView** contains a **Layout Manager** which determines how the data would be displayed. **Layout** can be Linear, Grid or Staggered.
 The RecyclerView then calls for an **Adapter** which manages the logic of your Views and it calls for **Data** as well hence all the functionality given to Views is provided in Adapters.
