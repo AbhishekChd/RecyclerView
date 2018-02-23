@@ -1,6 +1,6 @@
 # RecyclerView
-
-App demonstartes working of Recycler View and differnet layout managers and added 3 placeholder images of different sizes.
+c
+App demonstartes working of Recycler View and differnet layout managers and contains 3 placeholder images of different sizes.
 - 800 x 800
 - 800 x 900
 - 900 x 800
