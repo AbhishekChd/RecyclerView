@@ -20,9 +20,9 @@ App demonstartes working of Recycler View and differnet layout managers and cont
 
 ## Index <img src="https://image.flaticon.com/icons/svg/174/174836.svg" width="25px">
 1. [What is Recycler View?](#what-is-recycler-view)
-2. [Working](#working)
+2. [Working of App](#working)
 3. [Main Files](#main-files)
-4. [Layouts](#layouts)
+4. [Screenshots](#layouts)
 
 ## What is Recycler View?
  **Recycler View as said by name Recycles the views. Fundamental of Recycler View is that it keeps as many views in memory as needed to display on screen + least amount needed to display nice animation.**
