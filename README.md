@@ -1,11 +1,23 @@
 # RecyclerView
 
-App demonstartes working of Recycler View and differnet layout managers and contains 3 placeholder images of different sizes.
-- 800 x 800
-- 800 x 900
-- 900 x 800
+App demonstartes working of Recycler View and differnet layout managers and contains 3 placeholder images of different sizes. This would demonstrate how elements of different size will behave in same environment and it's performance.
 
-This would demonstrate how elements of different size will behave in same environment.
+To run the app:
+
+**Beginner**
+1. Download the repo as .zip
+2. Extract it and place it at desired location
+3. Open Android Studio and click on import
+4. Navigate to extracted folder and click on it
+5. Click ok
+6. Then click the Run App button
+
+**Preffered**
+1. Fork the repo
+2. Open Android Studio, Goto VCS > Clone from GitHub
+3. Enter .git URL of your forked repo
+4. Press ok and let it finish
+5. Run the app
 
 ## Index <img src="https://image.flaticon.com/icons/svg/174/174836.svg" width="25px">
 1. [What is Recycler View?](#what-is-recycler-view)
@@ -57,8 +69,8 @@ class SomeAdapter extends RecyclerView.Adapter<SomeAdapter.SomeAdapterViewHolder
 ```
 Then we Override certain methods, I'll explain them individually:
 1. <code>onCreateViewHolder(ViewHolder parent, int viewType)</code> : This method manages what happens when View is created. RecyclerView on creates some view, just enough fr smooth scrolling (I explained that above).
-   **parent** is the Parent View where all the list items will be contained in.
-   **viewType** is used when we have more than one viewType
+   1. **parent** is the Parent View where all the list items will be contained in.
+   2. **viewType** is used when we have more than one viewType
    Here we use Inflater to inflate a view (list_item.xml as told above) for single list item and return it.
    ``` java
    // This gets the context of Parent View
@@ -77,8 +89,9 @@ Then we Override certain methods, I'll explain them individually:
    ```
    
 2. <code>onBindViewolder(ViewHolder holder, int position)</code> : When we scroll same view created in the beginning are kept throughout run of our app, hence just the data is changed, which happens here. Binding means the view is on screen and needs data (Remember as I told above, an Adapter needs data). We need to instruct it how to get and display data.
-  **holder**: It is single item we want to show (list_item.xml)
-  **position**: It is the position of item in list, and hence we can show data as per position in list
+    1. **holder**: It is single item we want to show (list_item.xml)
+    2. **position**: It is the position of item in list, and hence we can show data as per position in list
+  
 3. <code>int getItemCount()</code> : For fast access we provide the length of list directly if possible. This makes manupulation of list easy and lite for RecyclerView.
     ``` java
     int IMAGE_COUNT = 100;
