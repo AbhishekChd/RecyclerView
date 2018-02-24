@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
         // Set Fixed size so that list updates faster
         recyclerView.setHasFixedSize(true);
 
+
+        // TODO(1): Change layout
         /*
          * 0 - LinearLayout - VERTICAL
          * 1 - LinearLayout - HORIZONTAL
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
          */
         int layout = 0;
 
+        // TODO(2): Chnage columns to be displayed
         // How many columns for GridLayout or Staggered GridLayout
         int spanCount = 2;
 
