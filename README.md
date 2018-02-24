@@ -20,7 +20,7 @@ This would demonstrate how elements of different size will behave in same enviro
  Suppose an app shows 6 views on your screen and you scroll down and you see another view instantly, and for that to happen some extra views were created to display that smooth scroll. Hence total views created? 6 + some extra views which is still better than loading 100s of views in memory at once.
 
 ### 1. Let's get into Recycler View
-<p align="center"><img src="https://developer.android.com/training/material/images/RecyclerView.png" width="55%"></p>
+<p align="center"><img src="https://developer.android.com/training/material/images/RecyclerView.png" width="65%"></p>
 
 As we can see, **RecyclerView** contains a **Layout Manager** which determines how the data would be displayed. **Layout** can be Linear, Grid or Staggered.
 The RecyclerView then calls for an **Adapter** which manages the logic of your Views and it calls for **Data** as well hence all the functionality given to Views is provided in Adapters.
@@ -61,8 +61,21 @@ Then we Override certain methods, I'll explain them individually:
    **viewType** is used when we have more than one viewType
    Here we use Inflater to inflate a view (list_item.xml as told above) for single list item and return it.
    ``` java
-   return LayoutInflater.from(parent.getContext()).inflate(R.layout.image_list_item, parent, false);
+   // This gets the context of Parent View
+   Context context = parent.getContext();
+   
+   // This is the id of layout file (Defined for single list item)
+   int listItemId = R.layout.image_list_item;
+   
+   // Attach to parent view immediately
+   boolean attachToRootImmediately = false;
+   
+   // This inflates the list_item view and attaches to parent, then returned as new View
+   View viewHolder = LayoutInflater.from(context).inflate(listItemId, parent, false);
+   
+   return viewHolder;
    ```
+   
 2. <code>onBindViewolder(ViewHolder holder, int position)</code> : When we scroll same view created in the beginning are kept throughout run of our app, hence just the data is changed, which happens here. Binding means the view is on screen and needs data (Remember as I told above, an Adapter needs data). We need to instruct it how to get and display data.
   **holder**: It is single item we want to show (list_item.xml)
   **position**: It is the position of item in list, and hence we can show data as per position in list
