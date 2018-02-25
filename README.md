@@ -155,21 +155,21 @@ In [ImageAdapter.java](https://github.com/AbhishekChd/RecyclerView/blob/master/a
 ## Layouts
 
 ### 1. Linear Layout- Vertical Orientation
-<img src="https://raw.githubusercontent.com/AbhishekChd/RecyclerView/master/app/src/main/res/drawable/LinearLayoutV.png" alt="Linear Layout in vertical orientatiion" width="40%">
+<img src="https://raw.githubusercontent.com/AbhishekChd/RecyclerView/master/app/src/main/res/drawable/linear_layout_v.png" alt="Linear Layout in vertical orientatiion" width="40%">
 
 ### 2. Linear Layout- Horizontal Orientation
 <p>
-<img src="https://raw.githubusercontent.com/AbhishekChd/RecyclerView/master/app/src/main/res/drawable/LinearLayoutH.png" alt="Linear Layout in vertical orientatiion" width="40%">
+<img src="https://raw.githubusercontent.com/AbhishekChd/RecyclerView/master/app/src/main/res/drawable/linear_layout_h.png" alt="Linear Layout in vertical orientatiion" width="40%">
 
-<img src="https://raw.githubusercontent.com/AbhishekChd/RecyclerView/master/app/src/main/res/drawable/LinearLayoutH2.png" alt="Linear Layout in vertical orientatiion" width="40%">
+<img src="https://raw.githubusercontent.com/AbhishekChd/RecyclerView/master/app/src/main/res/drawable/linear_layout_h2.png" alt="Linear Layout in vertical orientatiion" width="40%">
 </p>
 
 ### 3. Grid Layout- Different Images
-<img src="https://raw.githubusercontent.com/AbhishekChd/RecyclerView/master/app/src/main/res/drawable/GridLayout Diff.png" alt="Linear Layout in vertical orientatiion" width="40%">
+<img src="https://raw.githubusercontent.com/AbhishekChd/RecyclerView/master/app/src/main/res/drawable/grid_layout_diff.png" alt="Linear Layout in vertical orientatiion" width="40%">
 
 ### 4. Grid Layout- Same Images
-<img src="https://raw.githubusercontent.com/AbhishekChd/RecyclerView/master/app/src/main/res/drawable/GridLayout same.png" alt="Linear Layout in vertical orientatiion" width="40%">
+<img src="https://raw.githubusercontent.com/AbhishekChd/RecyclerView/master/app/src/main/res/drawable/grid_layout_same.png" alt="Linear Layout in vertical orientatiion" width="40%">
 
 ### 5. Staggered Grid Layout
-<img src="https://raw.githubusercontent.com/AbhishekChd/RecyclerView/master/app/src/main/res/drawable/Staggered.png" alt="Linear Layout in vertical orientatiion" width="40%">
+<img src="https://raw.githubusercontent.com/AbhishekChd/RecyclerView/master/app/src/main/res/drawable/staggered.png" alt="Linear Layout in vertical orientatiion" width="40%">
 
